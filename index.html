@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="A love story in seven years and one monsoon night — for Shagun, from Vivek." />
+  <meta name="theme-color" content="#07060d" />
+  <title>Sunshine — our story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ INTERACTIVE QUIZ GATE ============ -->
+  <div class="quiz" id="quiz">
+    <div class="quiz-inner">
+
+      <div class="quiz-card active" data-step="intro">
+        <p class="quiz-eyebrow">hi, Sunshine</p>
+        <h2 class="quiz-h">Before I show you <span class="grad-text">something&hellip;</span></h2>
+        <p class="quiz-p">I built you a little place to live inside our story. But first, a tiny game, a few questions only <em>you</em> would know. No wrong answers, promise. Ready?</p>
+        <button class="btn-primary" data-action="start">Let's play &rarr;</button>
+        <button class="quiz-skip" data-action="skip">skip to the story</button>
+      </div>
+
+      <div class="quiz-stage" id="quizStage" aria-live="polite"></div>
+
+      <div class="quiz-card" data-step="done">
+        <div class="quiz-hearts" id="quizHearts"></div>
+        <p class="quiz-eyebrow">you got every one</p>
+        <h2 class="quiz-h">Of course <span class="grad-text">you did.</span></h2>
+        <p class="quiz-p">Because this story is ours, and no one knows it like you. Come in. Let me tell it back to you.</p>
+        <button class="btn-primary" data-action="enter">Open our story &darr;</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mini audio player -->
+  <div class="player" id="player">
+    <button class="player-btn" id="playBtn" aria-label="Play music" title="Play">
+      <svg class="ic-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      <svg class="ic-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="currentColor"/></svg>
+    </button>
+    <div class="player-meta">
+      <span class="player-title" id="playerTitle">All of me</span>
+      <span class="player-state" id="playerState">tap to play</span>
+    </div>
+    <button class="player-mute" id="muteBtn" aria-label="Mute" title="Mute">
+      <svg class="ic-vol" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 8a5 5 0 010 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="ic-muted" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 9l5 5M21 9l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="scroll-progress"><span id="progressBar"></span></div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="orb o4"></span>
+    <div class="hero-content">
+      <div class="hero-badge reveal"><span class="dot"></span> a story in seven years &amp; one monsoon night</div>
+      <h1 class="hero-title"><span class="grad-text reveal d1">Sunshine</span></h1>
+      <p class="hero-sub reveal d2">I water You, You water me.</p>
+      <p class="hero-names reveal d3"><b>Vivek</b> &nbsp;&middot;&nbsp; <b>Shagun</b></p>
+      <div class="scroll-cue reveal d4"><span>scroll</span><span class="mouse"></span></div>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER 1: TWO STRANGERS ============ -->
+  <section class="section" id="strangers">
+    <div class="container">
+      <p class="eyebrow reveal">Chapter One &middot; February 2019</p>
+      <h2 class="h-sec reveal">Two strangers <span class="grad-text">on Snapchat</span></h2>
+      <div class="prose reveal">
+        <p>It started with a random text. No plan, no reason, just a message sent out into the quiet to a stranger. We were both a little bruised back then, fresh off our own goodbyes, and somehow we found each other in that in-between.</p>
+        <p>We talked about the smallest things. The movies and series we were watching. Shayaris passed back and forth like little gifts. Nothing that was supposed to matter, and yet it was the beginning of everything.</p>
+        <p>The first thing I understood about you was your mind. How mature you were. How easily you understood me when no one else seemed to. I was fascinated by your intellect then, and I still am.</p>
+      </div>
+
+      <div class="intro-pair reveal">
+        <figure class="intro-card">
+          <div class="intro-photo"><img src="assets/photos/IMG_8715.jpg" alt="Vivek" loading="lazy" /></div>
+          <figcaption><span class="intro-name">Vivek</span><span class="intro-role">the one who texted first</span></figcaption>
+        </figure>
+        <div class="intro-amp grad-text">&amp;</div>
+        <figure class="intro-card">
+          <div class="intro-photo"><img src="assets/photos/fb5c6293-e24e-48d8-b730-7dfb2110732a.jpg" alt="Shagun" loading="lazy" /></div>
+          <figcaption><span class="intro-name">Shagun</span><span class="intro-role">my sunshine</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER 2: SEVEN YEARS ============ -->
+  <section class="section" id="sevenyears">
+    <div class="container">
+      <p class="eyebrow reveal">Chapter Two &middot; 2019 — 2026</p>
+      <h2 class="h-sec reveal">The seven years <span class="grad-text">in between</span></h2>
+      <div class="prose reveal"><p>Seven years. No shortcuts, no fast-forward. Just two people choosing to stay in each other's lives, one ordinary day at a time. <span style="color:var(--ink-dim)">(swipe the cards &rarr;)</span></p></div>
+
+      <div class="timeline-wrap reveal">
+        <div class="timeline-track">
+          <article class="glass tl-card">
+            <span class="tl-step">01</span>
+            <h3>We just kept talking</h3>
+            <p>Consistently. Checking up on each other, sharing the little things, making each other feel important. Slowly, we became best friends.</p>
+          </article>
+          <article class="glass tl-card">
+            <span class="tl-step">02</span>
+            <h3>Feelings, wrapped in jokes</h3>
+            <p>We talked about it so many times, but always in a fun way. Both of us too scared to say it for real, because losing each other was the one thing neither of us could risk.</p>
+          </article>
+          <article class="glass tl-card">
+            <span class="tl-step">03</span>
+            <h3>Drifting, and coming back</h3>
+            <p>There were times we drifted apart. But we always found our way back, because with each other, we felt peace. That was the thing we couldn't explain and couldn't walk away from.</p>
+          </article>
+          <article class="glass tl-card">
+            <span class="tl-step">04</span>
+            <h3>A line that's ours</h3>
+            <p>"You water me, and I water you." Four words that somehow hold seven whole years inside them.</p>
+            <span class="tl-hint">the story continues <span class="arrow">&darr;</span></span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER 3: THE ALMOST ============ -->
+  <section class="section center" id="almost">
+    <div class="container narrow">
+      <p class="eyebrow reveal">Chapter Three</p>
+      <h2 class="h-sec reveal">The <span class="grad-text">almost</span></h2>
+      <div class="prose reveal">
+        <p>We planned to meet, more than once. One time I backed out. After that we stopped planning, but I kept asking, and you kept saying <em>very soon</em>.</p>
+        <p>Years of <em>very soon</em>. Two cities, two lives, one thread that refused to break.</p>
+        <p class="pullquote">Delhi. Then Bengaluru. And still, somehow, always each other.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER 4: MUMBAI (CLIMAX) ============ -->
+  <section class="section chapter-mumbai" id="mumbai">
+    <canvas class="rain-canvas rain-mumbai" id="rainCanvasMumbai"></canvas>
+    <div class="container center">
+      <p class="eyebrow reveal">Chapter Four &middot; Mumbai, May 2026</p>
+      <h2 class="h-sec reveal">The night it <span class="grad-text">became real</span></h2>
+
+      <div class="mumbai-story">
+        <div class="ms-block reveal"><p>No occasion. Just a random, impromptu plan that we finally, finally didn't back out of. I flew in from Bengaluru. You came from Delhi for a training. Seven years, and we were about to be in the same city for the first time.</p></div>
+
+        <figure class="ms-photo reveal">
+          <img src="assets/photos/mum1.jpg" alt="Vivek and Shagun at Marine Drive" loading="lazy" />
+          <figcaption>Marine Drive, the city lights behind us</figcaption>
+        </figure>
+
+        <div class="ms-block reveal"><p>I waited outside the airport arrival gate. Then there you were. The first thing I saw was your face and a soft, normal smile. I was nervous. Maybe you were too. But the moment we hugged, sideways, almost shy, every bit of that nervousness just left.</p></div>
+
+        <div class="ms-gallery reveal">
+          <figure><img src="assets/photos/shagun-2.jpg" alt="Marine Drive night" loading="lazy" /></figure>
+          <figure><img src="assets/photos/mum2.jpg" alt="Marine Drive night" loading="lazy" /></figure>
+          <figure><img src="assets/photos/vivek.jpg" alt="Marine Drive night" loading="lazy" /></figure>
+        </div>
+
+        <div class="ms-block reveal"><p>That Wednesday night we had drinks in the room. You got pretty drunk, and we decided to go for a walk. It was drizzling, a little breeze in the air. We reached a point on the road, and the sky opened, heavy rain, out of nowhere. We ran for the nearest shelter, a shed outside a bank ATM.</p></div>
+
+        <figure class="ms-photo wide reveal">
+          <img src="assets/photos/IMG_0183.jpg" alt="Walking in the Mumbai rain" loading="lazy" />
+          <figcaption>the walk, before the rain found us</figcaption>
+        </figure>
+
+        <div class="ms-block reveal">
+          <p>And there, under that shed, in the rain, you finally said it. Everything you'd been carrying for years. That you loved me. That you found peace in me. You told me you'd given me a hundred hints over the years, and I'd been too slow, too careful, to catch a single one.</p>
+          <p>Your health got worse that night, high fever, cold, so we went back to the room.</p>
+        </div>
+
+        <div class="ms-block reveal">
+          <p>The next day, after your training, I told you everything you'd said, because you didn't remember a word of it. And then I said my part. That I love you too. That you give me <em>sukoon</em>. I named the fear we'd both carried for seven years, that we were terrified of losing each other, and I asked if you'd take the risk anyway.</p>
+          <p>I asked more than once. And then, lying against me, you said it. <em>Let's do it.</em></p>
+        </div>
+
+        <figure class="ms-photo portrait reveal climax-photo">
+          <img src="assets/photos/PHOTO-2026-09-28-08-40-06.jpg" alt="A tender moment" loading="lazy" />
+          <figcaption>and then I kissed you</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER 5: NOW ============ -->
+  <section class="section" id="now">
+    <div class="container">
+      <p class="eyebrow reveal">Chapter Five &middot; Now</p>
+      <h2 class="h-sec reveal">What you are <span class="grad-text">to me today</span></h2>
+      <div class="prose reveal">
+        <p>Today you are my sukoon. The love of my life. Not a maybe, not a someday, mine.</p>
+        <p>What I admire most is still your mind, the way you understand me without me having to explain. And the small thing that undoes me every time? The way you care about me. It's quiet and it's real and it's everything.</p>
+      </div>
+
+      <div class="gallery reveal" id="gallery">
+        <div class="g-item"><img src="assets/photos/Image (3).jpg" alt="Shagun" loading="lazy" /></div>
+        <div class="g-item"><img src="assets/photos/IMG_9431.JPG" alt="us" loading="lazy" /></div>
+        <div class="g-item"><img src="assets/photos/Image (2).jpg" alt="Vivek" loading="lazy" /></div>
+        <div class="g-item"><img src="assets/photos/Image.jpg" alt="Shagun" loading="lazy" /></div>
+        <div class="g-item"><img src="assets/photos/Image (1).jpg" alt="Shagun" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAPTER 6: THE PROMISE ============ -->
+  <section class="section chapter-letter" id="letter">
+    <canvas class="rain-canvas rain-soft" id="rainCanvasLetter"></canvas>
+    <div class="container narrow">
+      <p class="eyebrow reveal">The Promise</p>
+      <h2 class="h-sec reveal">My letter <span class="grad-text">to you</span></h2>
+
+      <div class="glass love-letter reveal">
+        <p class="salutation">My Sunshine,</p>
+        <p>Seven years ago I texted a stranger, and today I'm writing to the love of my life. I don't know how I got that lucky, but I'm not going to question it. I'm just going to keep choosing you.</p>
+        <p>You were scared of losing me, and I was scared of losing you, and in Mumbai we finally decided that fear was a terrible reason to stay apart. So we jumped. You said <em>let's do it</em>, and I have never been more sure of anything.</p>
+        <p>Here is my promise. I want a lifetime with you. I want to love you through every ordinary day and every impossible one. I want to see every city and every country with you, one by one, until the map runs out and we start again.</p>
+        <p>You give me sukoon. You are my peace on earth. And wherever this life takes us, you water me and I water you, always.</p>
+        <p class="signoff">I love you so much,<br />Yours, forever —</p>
+        <p class="signature">Vivek</p>
+      </div>
+
+      <div class="letter-footer reveal">
+        <p class="footer-line">You found the right one. And I'll be here, loving you, till the very end.</p>
+        <button class="btn-ghost" id="replayBtn">read it again &uarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"><p>made with <span class="heart">&hearts;</span> &middot; for Shagun</p></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">&#10094;</button>
+    <img class="lb-img" id="lbImg" src="" alt="" />
+    <button class="lb-next" id="lbNext" aria-label="Next">&#10095;</button>
+  </div>
+
+  <audio id="ambience" loop preload="none"><source src="assets/audio/ambience.mp3" type="audio/mpeg" /></audio>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
