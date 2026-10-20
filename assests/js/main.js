@@ -260,6 +260,30 @@
     }
   }
 
+   
+  /* ---------- Auto-start the music ----------
+     Browsers block sound from auto-playing until the visitor interacts with
+     the page. So we try immediately (works in some cases), and otherwise start
+     on her very first interaction anywhere — tap, click, key, or scroll — so it
+     feels automatic. */
+  if (audio) {
+    // 1) optimistic attempt on load
+    startAmbienceIfAvailable();
+
+    // 2) guaranteed start on first interaction
+    var kickoff = function () {
+      startAmbienceIfAvailable();
+      window.removeEventListener('pointerdown', kickoff);
+      window.removeEventListener('keydown', kickoff);
+      window.removeEventListener('touchstart', kickoff);
+      window.removeEventListener('scroll', kickoff);
+    };
+    window.addEventListener('pointerdown', kickoff, { passive: true });
+    window.addEventListener('keydown', kickoff);
+    window.addEventListener('touchstart', kickoff, { passive: true });
+    window.addEventListener('scroll', kickoff, { passive: true });
+  }
+
   /* ============================================================
      QUIZ GATE
      ============================================================ */
